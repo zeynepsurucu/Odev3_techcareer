@@ -3,13 +3,13 @@
     <string name="lemonade_name">Limonata</string>
     <string name="lemonade_size">100 ml</string>
     <string name="lemonade_price">45 ₺</string>
-    <string name="detox_name">Detox Drink</string>
+    <string name="detox_name">Detoks İçeceği</string>
     <string name="detox_size">355 ml</string>
     <string name="detox_price">110 ₺</string>
-    <string name="tea_name">Ice Tea</string>
+    <string name="tea_name">Soğuk Çay</string>
     <string name="tea_size">500 ml</string>
     <string name="tea_price">60 ₺</string>
-    <string name="orange_name"> Orange Juice</string>
+    <string name="orange_name">Portakal Suyu</string>
     <string name="orange_size">250 ml</string>
     <string name="orange_price">75 ₺</string>
     <string name="hello_user">Merhaba Darlene</string>
