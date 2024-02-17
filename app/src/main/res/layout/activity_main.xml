@@ -45,89 +45,95 @@
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/tv_user" />
 
-    <com.google.android.material.chip.Chip
-        android:layout_marginStart="8dp"
-        android:id="@+id/chip_drink"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_categories"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/yellowDark"
-        android:fontFamily="@font/source_sans_pro"
-        android:text="@string/drinks"
-        android:textAlignment="center"
-        android:textColor="@color/textColor1"
-        android:textSize="14sp"
-        app:chipStrokeColor="@color/yellowDark"
-        app:chipStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/sv_search_products" />
+        app:layout_constraintTop_toBottomOf="@+id/sv_search_products">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/yellow"
-        android:fontFamily="@font/source_sans_pro"
-        android:text="@string/food"
-        android:textAlignment="center"
-        android:textColor="@color/textColor1"
-        android:textSize="14sp"
-        app:chipStrokeColor="@color/yellowDark"
-        app:chipStrokeWidth="2dp"
-        app:layout_constraintStart_toEndOf="@id/chip_drink"
-        app:layout_constraintTop_toBottomOf="@id/sv_search_products" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/yellowDark"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/drinks"
+            android:textAlignment="center"
+            android:textColor="@color/textColor1"
+            android:textSize="14sp"
+            app:chipStrokeColor="@color/yellowDark"
+            app:chipStrokeWidth="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_health"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/yellow"
-        android:fontFamily="@font/source_sans_pro"
-        android:text="@string/health"
-        android:textAlignment="center"
-        android:textColor="@color/textColor1"
-        android:textSize="14sp"
-        app:chipStrokeColor="@color/yellowDark"
-        app:chipStrokeWidth="2dp"
-        app:layout_constraintStart_toEndOf="@id/chip_food"
-        app:layout_constraintTop_toBottomOf="@id/sv_search_products" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/food"
+            android:textAlignment="center"
+            android:textColor="@color/textColor1"
+            android:textSize="14sp"
+            app:chipStrokeColor="@color/yellowDark"
+            app:chipStrokeWidth="2dp"
+            app:layout_constraintEnd_toStartOf="@id/chip_health"
+            app:layout_constraintStart_toEndOf="@id/chip_drink"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_gaming"
-        android:layout_width="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/yellow"
-        android:fontFamily="@font/source_sans_pro"
-        android:text="@string/gaming"
-        android:textColor="@color/textColor1"
-        android:textSize="14sp"
-        app:chipStrokeColor="@color/yellowDark"
-        app:chipStrokeWidth="2dp"
-        app:layout_constraintStart_toEndOf="@id/chip_health"
-        app:layout_constraintTop_toBottomOf="@id/sv_search_products" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/health"
+            android:textAlignment="center"
+            android:textColor="@color/textColor1"
+            android:textSize="14sp"
+            app:chipStrokeColor="@color/yellowDark"
+            app:chipStrokeWidth="2dp"
+            app:layout_constraintEnd_toStartOf="@id/chip_gaming"
+            app:layout_constraintStart_toEndOf="@id/chip_food"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_gaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="@string/gaming"
+            android:textColor="@color/textColor1"
+            android:textSize="14sp"
+            app:chipStrokeColor="@color/yellowDark"
+            app:chipStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chip_health"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_marginTop="8dp"
         android:id="@+id/ll_products_filter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/chip_drink">
+        app:layout_constraintTop_toBottomOf="@id/cl_categories">
 
         <TextView
-            android:layout_marginStart="8dp"
             android:id="@+id/tv_find_results"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:fontFamily="@font/source_sans_pro"
             android:text="@string/find_results"
@@ -137,7 +143,6 @@
             app:layout_constraintEnd_toStartOf="@+id/tv_item_count"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/chip_drink" />
-
 
 
         <TextView
@@ -153,10 +158,10 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginTop="8dp"
         android:id="@+id/cl_products"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/ll_products_filter">
@@ -165,10 +170,10 @@
             android:id="@+id/iv_detox"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:contentDescription="@string/detox_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/detox"
-            android:contentDescription="@string/detox_name"/>
+            app:srcCompat="@drawable/detox" />
 
         <TextView
             android:id="@+id/tv_detox_name"
@@ -181,6 +186,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_detox" />
+
         <TextView
             android:id="@+id/tv_detox_size"
             android:layout_width="150dp"
@@ -192,6 +198,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_detox_name" />
+
         <TextView
             android:id="@+id/tv_detox_price"
             android:layout_width="150dp"
@@ -201,25 +208,25 @@
             android:textColor="@color/yellowDark"
             android:textSize="20sp"
             android:textStyle="bold"
-           app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_detox_size" />
 
         <ImageView
             android:id="@+id/iv_lemonade"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/lemonade_name"
             app:layout_constraintEnd_toStartOf="@+id/iv_detox"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/lemonade"
-            android:contentDescription="@string/lemonade_name"/>
+            app:srcCompat="@drawable/lemonade" />
 
         <TextView
             android:id="@+id/tv_lemonade_name"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/lemonade_name"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
@@ -233,7 +240,7 @@
             android:id="@+id/tv_lemonade_size"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/lemonade_size"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
@@ -247,7 +254,7 @@
             android:id="@+id/tv_lemonade_price"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/lemonade_price"
             android:textAlignment="center"
             android:textColor="@color/yellowDark"
@@ -261,18 +268,18 @@
             android:id="@+id/iv_tea"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/tea_name"
             app:layout_constraintEnd_toStartOf="@+id/iv_orange_juice"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_lemonade_price"
-            app:srcCompat="@drawable/ice_tea"
-            android:contentDescription="@string/tea_name"/>
+            app:srcCompat="@drawable/ice_tea" />
 
         <TextView
             android:id="@+id/tv_teaName"
             android:layout_width="151dp"
             android:layout_height="25dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/tea_name"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
@@ -286,7 +293,7 @@
             android:id="@+id/tv_tea_size"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/tea_size"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
@@ -299,7 +306,7 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/tea_price"
             android:textAlignment="center"
             android:textColor="@color/yellowDark"
@@ -313,32 +320,34 @@
             android:id="@+id/iv_orange_juice"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/orange_juice"
-            app:layout_constraintTop_toBottomOf="@id/tv_detox_price"
+            android:contentDescription="@string/orange_name"
             app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/orange_name"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_detox_price"
+            app:srcCompat="@drawable/orange_juice" />
+
         <TextView
             android:id="@+id/tv_orange_name"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/iv_orange_juice"
-            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/orange_name"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_orange_juice" />
+
         <TextView
             android:id="@+id/tv_orange_size"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tv_orange_name"
-            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/orange_size"
             android:textAlignment="center"
             android:textColor="@color/textColor1"
             android:textSize="12sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_orange_name" />
 
         <TextView
             android:id="@+id/textView"
